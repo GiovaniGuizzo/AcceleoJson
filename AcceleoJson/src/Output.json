@@ -1,0 +1,1522 @@
+{
+	"Nome":"Root Element",
+	"Pacotes":[
+		{
+			"Name":"PrimitiveTypes",
+			"Data Types":[
+				{
+					"Name":"Integer",
+					"Package":"PrimitiveTypes",
+					"Serializable":"true"
+				},
+				{
+					"Name":"String",
+					"Package":"PrimitiveTypes",
+					"Serializable":"true"
+				},
+				{
+					"Name":"Boolean",
+					"Package":"PrimitiveTypes",
+					"Serializable":"true"
+				},
+				{
+					"Name":"Double",
+					"Package":"PrimitiveTypes",
+					"Serializable":"true"
+				}
+			]
+		},
+		{
+			"Name":"Bugzilla",
+			"Classes":[
+				{
+					"Name":"BugzillaRoot",
+					"Package":"Bugzilla",
+					"Abstract":"false",
+					"Interface":"false",
+					"Attributes":[
+						{
+							"Name":"version",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"BugzillaRoot",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"urlbase",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"BugzillaRoot",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"maintainer",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"BugzillaRoot",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"exporter",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"1",
+							"Containing Class":"BugzillaRoot",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						}
+					],
+					"References":[
+						{
+							"Name":"bugs",
+							"Type":"Bug",
+							"Unique":"true",
+							"Many":"true",
+							"Ordered":"true",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"-1",
+							"Containing Class":"BugzillaRoot",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Opposite":"bug_bugzillaRoot",
+							"Containment":"true",
+							"Container":"false",
+							"Resolve Proxies":"true",
+							"Reference Type":"Bug"
+						}
+					]
+				},
+				{
+					"Name":"Bug",
+					"Package":"Bugzilla",
+					"Abstract":"false",
+					"Interface":"false",
+					"Attributes":[
+						{
+							"Name":"error",
+							"Type":"ErrorType",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"ErrorType",
+							"ID":"false"
+						},
+						{
+							"Name":"bug_id",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"exporter",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"urlbase",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"bug_status",
+							"Type":"StatusType",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"StatusType",
+							"ID":"false"
+						},
+						{
+							"Name":"resolution",
+							"Type":"ResolutionType",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"ResolutionType",
+							"ID":"false"
+						},
+						{
+							"Name":"product",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"priority",
+							"Type":"PriorityType",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"PriorityType",
+							"ID":"false"
+						},
+						{
+							"Name":"version",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"rep_platform",
+							"Type":"ReportedPlatformType",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"ReportedPlatformType",
+							"ID":"false"
+						},
+						{
+							"Name":"assigned_to",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"delta_ts",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"component",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"reporter",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"target_milestone",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"bug_severity",
+							"Type":"SeverityType",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"SeverityType",
+							"ID":"false"
+						},
+						{
+							"Name":"creation_ts",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"qa_contact",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"status_whiteboard",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"op_sys",
+							"Type":"OperatingSystemType",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"OperatingSystemType",
+							"ID":"false"
+						},
+						{
+							"Name":"bug_file_loc",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"short_desc",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						}
+					],
+					"References":[
+						{
+							"Name":"bug_bugzillaRoot",
+							"Type":"BugzillaRoot",
+							"Unique":"true",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Opposite":"bugs",
+							"Containment":"false",
+							"Container":"true",
+							"Resolve Proxies":"true",
+							"Reference Type":"BugzillaRoot"
+						},
+						{
+							"Name":"keywords",
+							"Type":"Keywords",
+							"Unique":"true",
+							"Many":"true",
+							"Ordered":"true",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"-1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Containment":"true",
+							"Container":"false",
+							"Resolve Proxies":"true",
+							"Reference Type":"Keywords"
+						},
+						{
+							"Name":"dependson",
+							"Type":"Dependson",
+							"Unique":"true",
+							"Many":"true",
+							"Ordered":"true",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"-1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Containment":"true",
+							"Container":"false",
+							"Resolve Proxies":"true",
+							"Reference Type":"Dependson"
+						},
+						{
+							"Name":"blocks",
+							"Type":"Blocks",
+							"Unique":"true",
+							"Many":"true",
+							"Ordered":"true",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"-1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Containment":"true",
+							"Container":"false",
+							"Resolve Proxies":"true",
+							"Reference Type":"Blocks"
+						},
+						{
+							"Name":"cc",
+							"Type":"Cc",
+							"Unique":"true",
+							"Many":"true",
+							"Ordered":"true",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"-1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Containment":"true",
+							"Container":"false",
+							"Resolve Proxies":"true",
+							"Reference Type":"Cc"
+						},
+						{
+							"Name":"long_desc",
+							"Type":"LongDesc",
+							"Unique":"true",
+							"Many":"true",
+							"Ordered":"true",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"-1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Containment":"true",
+							"Container":"false",
+							"Resolve Proxies":"true",
+							"Reference Type":"LongDesc"
+						},
+						{
+							"Name":"attachment",
+							"Type":"Attachment",
+							"Unique":"true",
+							"Many":"true",
+							"Ordered":"true",
+							"Required":"false",
+							"Lower Bound":"0",
+							"Upper Bound":"-1",
+							"Containing Class":"Bug",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Containment":"true",
+							"Container":"false",
+							"Resolve Proxies":"true",
+							"Reference Type":"Attachment"
+						}
+					]
+				},
+				{
+					"Name":"StringElt",
+					"Package":"Bugzilla",
+					"Abstract":"true",
+					"Interface":"false",
+					"Attributes":[
+						{
+							"Name":"value",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"StringElt",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						}
+					]
+				},
+				{
+					"Name":"Keywords",
+					"Package":"Bugzilla",
+					"Abstract":"false",
+					"Interface":"false",
+					"Super Types":[
+						"StringElt"
+					]
+				},
+				{
+					"Name":"Dependson",
+					"Package":"Bugzilla",
+					"Abstract":"false",
+					"Interface":"false",
+					"Super Types":[
+						"StringElt"
+					]
+				},
+				{
+					"Name":"Blocks",
+					"Package":"Bugzilla",
+					"Abstract":"false",
+					"Interface":"false",
+					"Super Types":[
+						"StringElt"
+					]
+				},
+				{
+					"Name":"Cc",
+					"Package":"Bugzilla",
+					"Abstract":"false",
+					"Interface":"false",
+					"Super Types":[
+						"StringElt"
+					]
+				},
+				{
+					"Name":"LongDesc",
+					"Package":"Bugzilla",
+					"Abstract":"false",
+					"Interface":"false",
+					"Attributes":[
+						{
+							"Name":"isPrivate",
+							"Type":"Boolean",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"LongDesc",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"Boolean",
+							"ID":"false"
+						},
+						{
+							"Name":"who",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"LongDesc",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"bug_when",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"LongDesc",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"thetext",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"LongDesc",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						}
+					]
+				},
+				{
+					"Name":"Attachment",
+					"Package":"Bugzilla",
+					"Abstract":"false",
+					"Interface":"false",
+					"Attributes":[
+						{
+							"Name":"isObsolete",
+							"Type":"Boolean",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Attachment",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"Boolean",
+							"ID":"false"
+						},
+						{
+							"Name":"isPatch",
+							"Type":"Boolean",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Attachment",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"Boolean",
+							"ID":"false"
+						},
+						{
+							"Name":"isPrivate",
+							"Type":"Boolean",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Attachment",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"Boolean",
+							"ID":"false"
+						},
+						{
+							"Name":"id",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Attachment",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"date",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Attachment",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"desc",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Attachment",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"type",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Attachment",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						},
+						{
+							"Name":"data",
+							"Type":"String",
+							"Unique":"false",
+							"Many":"false",
+							"Ordered":"false",
+							"Required":"true",
+							"Lower Bound":"1",
+							"Upper Bound":"1",
+							"Containing Class":"Attachment",
+							"Changeable":"true",
+							"Derived":"false",
+							"Transient":"false",
+							"Unsettable":"false",
+							"Volatile":"false",
+							"Attribute Type":"String",
+							"ID":"false"
+						}
+					]
+				}
+			],
+			"Enums":[
+				{
+					"Name":"ErrorType",
+					"Package":"Bugzilla",
+					"Serializable":"true",
+					"Literals":[
+						{
+							"Name":"et_null",
+							"Enum":"ErrorType",
+							"Value":"1",
+							"Literal":"et_null"
+						},
+						{
+							"Name":"et_NotFound",
+							"Enum":"ErrorType",
+							"Value":"2",
+							"Literal":"et_NotFound"
+						},
+						{
+							"Name":"et_NotPermitted",
+							"Enum":"ErrorType",
+							"Value":"3",
+							"Literal":"et_NotPermitted"
+						},
+						{
+							"Name":"et_InvalidBugId",
+							"Enum":"ErrorType",
+							"Value":"4",
+							"Literal":"et_InvalidBugId"
+						}
+					]
+				},
+				{
+					"Name":"SeverityType",
+					"Package":"Bugzilla",
+					"Serializable":"true",
+					"Literals":[
+						{
+							"Name":"st_null",
+							"Enum":"SeverityType",
+							"Value":"1",
+							"Literal":"st_null"
+						},
+						{
+							"Name":"st_blocker",
+							"Enum":"SeverityType",
+							"Value":"2",
+							"Literal":"st_blocker"
+						},
+						{
+							"Name":"st_critical",
+							"Enum":"SeverityType",
+							"Value":"3",
+							"Literal":"st_critical"
+						},
+						{
+							"Name":"st_major",
+							"Enum":"SeverityType",
+							"Value":"4",
+							"Literal":"st_major"
+						},
+						{
+							"Name":"st_normal",
+							"Enum":"SeverityType",
+							"Value":"5",
+							"Literal":"st_normal"
+						},
+						{
+							"Name":"st_minor",
+							"Enum":"SeverityType",
+							"Value":"6",
+							"Literal":"st_minor"
+						},
+						{
+							"Name":"st_trivial",
+							"Enum":"SeverityType",
+							"Value":"7",
+							"Literal":"st_trivial"
+						},
+						{
+							"Name":"st_enhancement",
+							"Enum":"SeverityType",
+							"Value":"8",
+							"Literal":"st_enhancement"
+						}
+					]
+				},
+				{
+					"Name":"StatusType",
+					"Package":"Bugzilla",
+					"Serializable":"true",
+					"Literals":[
+						{
+							"Name":"st_null",
+							"Enum":"StatusType",
+							"Value":"1",
+							"Literal":"st_null"
+						},
+						{
+							"Name":"st_UNCONFIRMED",
+							"Enum":"StatusType",
+							"Value":"2",
+							"Literal":"st_UNCONFIRMED"
+						},
+						{
+							"Name":"st_NEW",
+							"Enum":"StatusType",
+							"Value":"3",
+							"Literal":"st_NEW"
+						},
+						{
+							"Name":"st_ASSIGNED",
+							"Enum":"StatusType",
+							"Value":"4",
+							"Literal":"st_ASSIGNED"
+						},
+						{
+							"Name":"st_REOPENED",
+							"Enum":"StatusType",
+							"Value":"5",
+							"Literal":"st_REOPENED"
+						},
+						{
+							"Name":"st_RESOLVED",
+							"Enum":"StatusType",
+							"Value":"6",
+							"Literal":"st_RESOLVED"
+						},
+						{
+							"Name":"st_VERIFIED",
+							"Enum":"StatusType",
+							"Value":"7",
+							"Literal":"st_VERIFIED"
+						},
+						{
+							"Name":"st_CLOSED",
+							"Enum":"StatusType",
+							"Value":"8",
+							"Literal":"st_CLOSED"
+						}
+					]
+				},
+				{
+					"Name":"OperatingSystemType",
+					"Package":"Bugzilla",
+					"Serializable":"true",
+					"Literals":[
+						{
+							"Name":"ost_null",
+							"Enum":"OperatingSystemType",
+							"Value":"1",
+							"Literal":"ost_null"
+						},
+						{
+							"Name":"ost_all",
+							"Enum":"OperatingSystemType",
+							"Value":"2",
+							"Literal":"ost_all"
+						},
+						{
+							"Name":"ost_Windows 3.1",
+							"Enum":"OperatingSystemType",
+							"Value":"3",
+							"Literal":"ost_Windows 3.1"
+						},
+						{
+							"Name":"ost_Windows 95",
+							"Enum":"OperatingSystemType",
+							"Value":"4",
+							"Literal":"ost_Windows 95"
+						},
+						{
+							"Name":"ost_Windows 98",
+							"Enum":"OperatingSystemType",
+							"Value":"5",
+							"Literal":"ost_Windows 98"
+						},
+						{
+							"Name":"ost_Windows ME",
+							"Enum":"OperatingSystemType",
+							"Value":"6",
+							"Literal":"ost_Windows ME"
+						},
+						{
+							"Name":"ost_Windows 2000",
+							"Enum":"OperatingSystemType",
+							"Value":"7",
+							"Literal":"ost_Windows 2000"
+						},
+						{
+							"Name":"ost_Windows NT",
+							"Enum":"OperatingSystemType",
+							"Value":"8",
+							"Literal":"ost_Windows NT"
+						},
+						{
+							"Name":"ost_Windows XP",
+							"Enum":"OperatingSystemType",
+							"Value":"9",
+							"Literal":"ost_Windows XP"
+						},
+						{
+							"Name":"ost_Windows Vista",
+							"Enum":"OperatingSystemType",
+							"Value":"10",
+							"Literal":"ost_Windows Vista"
+						},
+						{
+							"Name":"ost_Windows Server 2003",
+							"Enum":"OperatingSystemType",
+							"Value":"11",
+							"Literal":"ost_Windows Server 2003"
+						},
+						{
+							"Name":"ost_MacSystem 7",
+							"Enum":"OperatingSystemType",
+							"Value":"12",
+							"Literal":"ost_MacSystem 7"
+						},
+						{
+							"Name":"ost_MacSystem 7.5",
+							"Enum":"OperatingSystemType",
+							"Value":"13",
+							"Literal":"ost_MacSystem 7.5"
+						},
+						{
+							"Name":"ost_MacSystem 7.6.1",
+							"Enum":"OperatingSystemType",
+							"Value":"14",
+							"Literal":"ost_MacSystem 7.6.1"
+						},
+						{
+							"Name":"ost_MacSystem 8.0",
+							"Enum":"OperatingSystemType",
+							"Value":"15",
+							"Literal":"ost_MacSystem 8.0"
+						},
+						{
+							"Name":"ost_MacSystem 8.5",
+							"Enum":"OperatingSystemType",
+							"Value":"16",
+							"Literal":"ost_MacSystem 8.5"
+						},
+						{
+							"Name":"ost_MacSystem 8.6",
+							"Enum":"OperatingSystemType",
+							"Value":"17",
+							"Literal":"ost_MacSystem 8.6"
+						},
+						{
+							"Name":"ost_MacSystem 9.x",
+							"Enum":"OperatingSystemType",
+							"Value":"18",
+							"Literal":"ost_MacSystem 9.x"
+						},
+						{
+							"Name":"ost_Mac OS X 10.0",
+							"Enum":"OperatingSystemType",
+							"Value":"19",
+							"Literal":"ost_Mac OS X 10.0"
+						},
+						{
+							"Name":"ost_Mac OS X 10.1",
+							"Enum":"OperatingSystemType",
+							"Value":"20",
+							"Literal":"ost_Mac OS X 10.1"
+						},
+						{
+							"Name":"ost_Mac OS X 10.2",
+							"Enum":"OperatingSystemType",
+							"Value":"21",
+							"Literal":"ost_Mac OS X 10.2"
+						},
+						{
+							"Name":"ost_Mac OS X 10.3",
+							"Enum":"OperatingSystemType",
+							"Value":"22",
+							"Literal":"ost_Mac OS X 10.3"
+						},
+						{
+							"Name":"ost_Linux",
+							"Enum":"OperatingSystemType",
+							"Value":"23",
+							"Literal":"ost_Linux"
+						},
+						{
+							"Name":"ost_BDS/OS",
+							"Enum":"OperatingSystemType",
+							"Value":"24",
+							"Literal":"ost_BDS/OS"
+						},
+						{
+							"Name":"ost_FreeBSD",
+							"Enum":"OperatingSystemType",
+							"Value":"25",
+							"Literal":"ost_FreeBSD"
+						},
+						{
+							"Name":"ost_NetBSD",
+							"Enum":"OperatingSystemType",
+							"Value":"26",
+							"Literal":"ost_NetBSD"
+						},
+						{
+							"Name":"ost_OpenBSD",
+							"Enum":"OperatingSystemType",
+							"Value":"27",
+							"Literal":"ost_OpenBSD"
+						},
+						{
+							"Name":"ost_AIX",
+							"Enum":"OperatingSystemType",
+							"Value":"28",
+							"Literal":"ost_AIX"
+						},
+						{
+							"Name":"ost_BeOS",
+							"Enum":"OperatingSystemType",
+							"Value":"29",
+							"Literal":"ost_BeOS"
+						},
+						{
+							"Name":"ost_HP-UX",
+							"Enum":"OperatingSystemType",
+							"Value":"30",
+							"Literal":"ost_HP-UX"
+						},
+						{
+							"Name":"ost_IRIX",
+							"Enum":"OperatingSystemType",
+							"Value":"31",
+							"Literal":"ost_IRIX"
+						},
+						{
+							"Name":"ost_Neutrino",
+							"Enum":"OperatingSystemType",
+							"Value":"32",
+							"Literal":"ost_Neutrino"
+						},
+						{
+							"Name":"ost_OpenVMS",
+							"Enum":"OperatingSystemType",
+							"Value":"33",
+							"Literal":"ost_OpenVMS"
+						},
+						{
+							"Name":"ost_OS/2",
+							"Enum":"OperatingSystemType",
+							"Value":"34",
+							"Literal":"ost_OS/2"
+						},
+						{
+							"Name":"ost_OSF/1",
+							"Enum":"OperatingSystemType",
+							"Value":"35",
+							"Literal":"ost_OSF/1"
+						},
+						{
+							"Name":"ost_Solaris",
+							"Enum":"OperatingSystemType",
+							"Value":"36",
+							"Literal":"ost_Solaris"
+						},
+						{
+							"Name":"ost_SunOS",
+							"Enum":"OperatingSystemType",
+							"Value":"37",
+							"Literal":"ost_SunOS"
+						},
+						{
+							"Name":"ost_other",
+							"Enum":"OperatingSystemType",
+							"Value":"38",
+							"Literal":"ost_other"
+						}
+					]
+				},
+				{
+					"Name":"PriorityType",
+					"Package":"Bugzilla",
+					"Serializable":"true",
+					"Literals":[
+						{
+							"Name":"pt_null",
+							"Enum":"PriorityType",
+							"Value":"1",
+							"Literal":"pt_null"
+						},
+						{
+							"Name":"pt_P1",
+							"Enum":"PriorityType",
+							"Value":"2",
+							"Literal":"pt_P1"
+						},
+						{
+							"Name":"pt_P2",
+							"Enum":"PriorityType",
+							"Value":"3",
+							"Literal":"pt_P2"
+						},
+						{
+							"Name":"pt_P3",
+							"Enum":"PriorityType",
+							"Value":"4",
+							"Literal":"pt_P3"
+						},
+						{
+							"Name":"pt_P4",
+							"Enum":"PriorityType",
+							"Value":"5",
+							"Literal":"pt_P4"
+						},
+						{
+							"Name":"pt_P5",
+							"Enum":"PriorityType",
+							"Value":"6",
+							"Literal":"pt_P5"
+						}
+					]
+				},
+				{
+					"Name":"ReportedPlatformType",
+					"Package":"Bugzilla",
+					"Serializable":"true",
+					"Literals":[
+						{
+							"Name":"rpt_null",
+							"Enum":"ReportedPlatformType",
+							"Value":"1",
+							"Literal":"rpt_null"
+						},
+						{
+							"Name":"rpt_all",
+							"Enum":"ReportedPlatformType",
+							"Value":"2",
+							"Literal":"rpt_all"
+						},
+						{
+							"Name":"rpt_DEC",
+							"Enum":"ReportedPlatformType",
+							"Value":"3",
+							"Literal":"rpt_DEC"
+						},
+						{
+							"Name":"rpt_HP",
+							"Enum":"ReportedPlatformType",
+							"Value":"4",
+							"Literal":"rpt_HP"
+						},
+						{
+							"Name":"rpt_Macintosh",
+							"Enum":"ReportedPlatformType",
+							"Value":"5",
+							"Literal":"rpt_Macintosh"
+						},
+						{
+							"Name":"rpt_PC",
+							"Enum":"ReportedPlatformType",
+							"Value":"6",
+							"Literal":"rpt_PC"
+						},
+						{
+							"Name":"rpt_SGI",
+							"Enum":"ReportedPlatformType",
+							"Value":"7",
+							"Literal":"rpt_SGI"
+						},
+						{
+							"Name":"rpt_Sun",
+							"Enum":"ReportedPlatformType",
+							"Value":"8",
+							"Literal":"rpt_Sun"
+						},
+						{
+							"Name":"rpt_other",
+							"Enum":"ReportedPlatformType",
+							"Value":"9",
+							"Literal":"rpt_other"
+						}
+					]
+				},
+				{
+					"Name":"ResolutionType",
+					"Package":"Bugzilla",
+					"Serializable":"true",
+					"Literals":[
+						{
+							"Name":"rt_null",
+							"Enum":"ResolutionType",
+							"Value":"1",
+							"Literal":"rt_null"
+						},
+						{
+							"Name":"rt_FIXED",
+							"Enum":"ResolutionType",
+							"Value":"2",
+							"Literal":"rt_FIXED"
+						},
+						{
+							"Name":"rt_INVALID",
+							"Enum":"ResolutionType",
+							"Value":"3",
+							"Literal":"rt_INVALID"
+						},
+						{
+							"Name":"rt_WONTFIX",
+							"Enum":"ResolutionType",
+							"Value":"4",
+							"Literal":"rt_WONTFIX"
+						},
+						{
+							"Name":"rt_LATER",
+							"Enum":"ResolutionType",
+							"Value":"5",
+							"Literal":"rt_LATER"
+						},
+						{
+							"Name":"rt_REMIND",
+							"Enum":"ResolutionType",
+							"Value":"6",
+							"Literal":"rt_REMIND"
+						},
+						{
+							"Name":"rt_DUPLICATE",
+							"Enum":"ResolutionType",
+							"Value":"7",
+							"Literal":"rt_DUPLICATE"
+						},
+						{
+							"Name":"rt_WORKSFORME",
+							"Enum":"ResolutionType",
+							"Value":"8",
+							"Literal":"rt_WORKSFORME"
+						},
+						{
+							"Name":"rt_MOVED",
+							"Enum":"ResolutionType",
+							"Value":"9",
+							"Literal":"rt_MOVED"
+						}
+					]
+				}
+			]
+		}
+	]
+}
